@@ -1,0 +1,13 @@
+{
+  "name": "couchdb-push-interceptor",
+  "version": "0.1.0",
+  "description": "Intercepts kanso's requests to Couch in order to write the resulting doc to file. SEE README",
+  "categories": ["non-packages", "hacks"],
+  "maintainers": [
+    {
+      "name": "Luke Plaster",
+      "url": "http://lukep.org"
+    }
+  ],
+  "dependencies": {}
+}

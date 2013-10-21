@@ -1,0 +1,8 @@
+{
+  "name": "couchdb-push-interceptor",
+  "version": "0.1.0",
+  "author": "Luke Plaster <notatestuser@gmail.com>",
+  "description": "Intercepts kanso's requests to Couch in order to write the resulting doc to file. SEE README",
+  "license": "MIT",
+  "dependencies": {}
+}
