@@ -4,7 +4,13 @@ var fs   = require('fs')
   , http = require('http')
   , pkg  = require('./kanso.json');
 
-var OUTPUT_FILENAME = 'captured.json';
+var OUTPUT_FILENAME = 'captured.json'
+  , PORT;
+
+if (process.argv.length < 3 || ! (PORT = parseInt(process.argv[2]))) {
+  console.error('Usage: '+process.argv[1]+' <port>');
+  process.exit(0);
+}
 
 function listen(port) {
   var _server = http.createServer(function(req, res) {
@@ -31,7 +37,7 @@ function handleRequests(req, res, closeServerCb) {
     req.pipe( createOutputStream() );
     req.on('end', function() {
       respond(req, res, {id: 'written/to/'+OUTPUT_FILENAME});
-      console.log('Finished receiving the payload; shutting down server');
+      console.log('Finished receiving the payload; winding down server');
       closeServerCb();
     });
   }
@@ -55,5 +61,5 @@ function createOutputStream() {
 }
 
 console.log('Waiting for ze payload...')
-listen(5983);
+listen(PORT);
 
