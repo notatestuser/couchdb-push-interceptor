@@ -1,7 +1,7 @@
 {
   "name": "couchdb-push-interceptor",
   "version": "0.1.0",
-  "description": "Intercepts kanso's requests to Couch in order to write the resulting doc to file. SEE README",
+  "description": "Intercepts kanso's PUT request in order to write the doc to file. SEE README",
   "categories": ["non-packages", "hacks"],
   "maintainers": [
     {

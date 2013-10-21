@@ -2,7 +2,7 @@
   "name": "couchdb-push-interceptor",
   "version": "0.1.0",
   "author": "Luke Plaster <notatestuser@gmail.com>",
-  "description": "Intercepts kanso's requests to Couch in order to write the resulting doc to file. SEE README",
+  "description": "A dumb CouchDB mock that listens for a PUT and writes the doc to file",
   "license": "MIT",
   "dependencies": {}
 }
