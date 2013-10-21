@@ -6,7 +6,7 @@ A dumb CouchDB mock that listens for a PUT and writes the doc to file
 ## Why?!
 I [wanted](//github.com/kanso/kanso/issues/394) Kanso (a build and deployment tool for CouchApps) to build my project to a file so that I could:
 
-* create a build artifact in my company's CI system for maintaining a crumb trail;
+* create a build artifact in our CI system for maintaining a crumb trail;
 * use WebStorm LiveEdit to see my changes appear 'live' in the browser.
 
 The second aspiration isn't really achieved through doing this but I've sure as hell managed to get a snapshot of my app compiled neatly into a single file along with its dependencies. I'll now be able to drop this in storage and rest peacefully in knowing that I can easily roll back to a previous version of my project on demand.
@@ -17,11 +17,11 @@ $ ./interceptor.js 5983
 Waiting for ze payload...
 GET /_session?
  .. handling session request
-HEAD /backstage/
+HEAD /my-project/
  .. handling db HEAD request
-HEAD /backstage/_design/backstage
+HEAD /my-project/_design/my-project
  .. handling db HEAD request
-PUT /backstage/_design/backstage
+PUT /my-project/_design/my-project
  .. handling doc PUT request
 Creating payload output stream to file: captured.json
 Finished receiving the payload; winding down server
